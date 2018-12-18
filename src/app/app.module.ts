@@ -16,6 +16,7 @@ import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
 import { BookService } from './services/book.service';
 import { Routes, RouterModule } from '@angular/router';
+import { CanActivate } from '@angular/router/src/utils/preactivation';
 
 const appRoutes: Routes = [
   {
@@ -28,12 +29,28 @@ const appRoutes: Routes = [
   },
   {
     path: 'books',
+    canActivate: [AuthGuardService],
     component: BooksListComponent
   },
   {
     path: 'books/new',
+    canActivate: [AuthGuardService],
     component: BookFormComponent
-  }
+  },
+  {
+    path: 'books/view/:id',
+    canActivate: [AuthGuardService],
+    component: SingleBookComponent
+  },
+  {
+    path: '',
+    redirectTo: 'books',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: 'books'
+  },
 ];
 
 @NgModule({

@@ -11,13 +11,13 @@ export class AppComponent {
 
   constructor() {
 
-    var config = {
-      apiKey: "AIzaSyA4e0sRmlG0i-51Wm2m74Xha4uJz7vVagw",
-      authDomain: "bookcase-36b01.firebaseapp.com",
-      databaseURL: "https://bookcase-36b01.firebaseio.com",
-      projectId: "bookcase-36b01",
-      storageBucket: "",
-      messagingSenderId: "709763908044"
+    const config = {
+      apiKey: 'AIzaSyA4e0sRmlG0i-51Wm2m74Xha4uJz7vVagw',
+      authDomain: 'bookcase-36b01.firebaseapp.com',
+      databaseURL: 'https://bookcase-36b01.firebaseio.com',
+      projectId: 'bookcase-36b01',
+      storageBucket: '',
+      messagingSenderId: '709763908044'
     };
     firebase.initializeApp(config);
 
