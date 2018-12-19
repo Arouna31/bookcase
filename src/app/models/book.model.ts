@@ -1,8 +1,5 @@
 export class Book {
+  //picture?: string;
 
-  picture: string;
-
-  constructor(public title: string, public author: string) {
-
-  }
-} 
+  constructor(public title: string, public author: string) {}
+}
