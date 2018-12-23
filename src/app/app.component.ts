@@ -1,25 +1,24 @@
-import { Component } from '@angular/core';
-import * as firebase from 'firebase';
+import { Component } from "@angular/core";
+import * as firebase from "firebase";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  title = 'bookcase';
+  title = "bookcase";
 
   constructor() {
-
-    const config = {
-      apiKey: 'AIzaSyA4e0sRmlG0i-51Wm2m74Xha4uJz7vVagw',
-      authDomain: 'bookcase-36b01.firebaseapp.com',
-      databaseURL: 'https://bookcase-36b01.firebaseio.com',
-      projectId: 'bookcase-36b01',
-      storageBucket: '',
-      messagingSenderId: '709763908044'
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCKnxItBxFYG49ZdmuFL9fnS6DkT5s8XSA",
+      authDomain: "bookcase-bfc57.firebaseapp.com",
+      databaseURL: "https://bookcase-bfc57.firebaseio.com",
+      projectId: "bookcase-bfc57",
+      storageBucket: "bookcase-bfc57.appspot.com",
+      messagingSenderId: "100701698565"
     };
     firebase.initializeApp(config);
-
   }
 }
